@@ -1,0 +1,32 @@
+{
+    "name": "njhsgdbd/dcat-ext",
+    "alias": "",
+    "description": "Dcat Admin 常用拓展",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension"],
+    "homepage": "https://github.com/njhsgdbd/dcat-ext",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NJHSGDBD",
+            "email": "1261924572@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jelly\\DcatExt\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "NJHSGDBD\\DcatExt\\DcatExtServiceProvider",
+        "laravel": {
+            "providers": [
+                "NJHSGDBD\\DcatExt\\DcatExtServiceProvider"
+            ]
+        }
+    }
+}
