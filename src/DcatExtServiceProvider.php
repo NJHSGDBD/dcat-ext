@@ -9,29 +9,29 @@ use NJHSGDBD\DcatExt\Form\TextModifyField;
 
 class DcatExtServiceProvider extends ServiceProvider
 {
-	protected $js = [
+    protected $js = [
         'js/index.js',
     ];
-	protected $css = [
-		'css/index.css',
-	];
+    protected $css = [
+        'css/index.css',
+    ];
 
-	public function register()
-	{
-		//
-	}
+    public function register()
+    {
+        //
+    }
 
-	public function init()
-	{
-		parent::init();
+    public function init()
+    {
+        parent::init();
 
-		//
+        //
         #自定义表单文本输入框
-        Form::extend('textM2', TextModifyField::class);
-	}
+        Form::extend('textM', TextModifyField::class);
+    }
 
-	public function settingForm()
-	{
-		return new Setting($this);
-	}
+    public function settingForm()
+    {
+        return new Setting($this);
+    }
 }
